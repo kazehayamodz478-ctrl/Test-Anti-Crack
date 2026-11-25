@@ -1963,25 +1963,46 @@ function autoBypass()
   isBypassExecuted = true -- I-lock na agad
 
   pcall(function()
-HexPatches.MemoryPatch("libanogs.so", 0x204218, "h00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.MemoryPatch("libanogs.so", 0x438154, "h00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.MemoryPatch("libanogs.so", 0x44A714, "h00 00 80 D2 C0 03 5F D6", 32);
-HexPatches.MemoryPatch("libanogs.so", 0x48CF20, "h00 00 80 D2 C0 03 5F D6", 32);
+HexPatches.MemoryPatch("libanogs.so", 0x204218, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x20A39C, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x24D42C, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x29B58C, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x29FD40, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x29FD6C, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x3094FC, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x36B4C4, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x3778C8, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x37D344, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x404444, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x44A3F0, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x44BC90, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x44C104, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x455A80, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x468D48, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x4729C0, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x477FF8, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x47C43C, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x47F5E4, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x481640, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x48A6B4, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x494F48, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x497C98, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x497E64, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x4986B0, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x4987A8, "h00 00 80 D2 C0 03 5F D6")
+HexPatches.MemoryPatch("libanogs.so", 0x438154, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x44A714, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x48CF20, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x202680, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x35140C, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x37B5A8, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x3893D8, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x39AE94, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x497244, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x501210, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x431D70, "h00 00 80 D2 C0 03 5F D6", 32)
+HexPatches.MemoryPatch("libanogs.so", 0x4AFC1C, "h00 00 80 D2 C0 03 5F D6", 32)
 
-HexPatches.MemoryPatch("libanogs.so", 0x202680, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x35140C, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x37B5A8, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x3893D8, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x39AE94, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x44BC90, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x455A80, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x497244, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x501210, "h00 00 80 D2 C0 03 5F D6", 32);
-      
-      HexPatches.MemoryPatch("libanogs.so", 0x431D70, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x48A6B4, "h00 00 80 D2 C0 03 5F D6", 32);
-      HexPatches.MemoryPatch("libanogs.so", 0x4AFC1C, "h00 00 80 D2 C0 03 5F D6", 32);
-      
 HexPatches.MemoryPatch("libanogs.so", 0x1f8408, "h00 00 80 D2 C0 03 5F D6")
 HexPatches.MemoryPatch("libanogs.so", 0x1f87b0, "h00 00 80 D2 C0 03 5F D6")
 HexPatches.MemoryPatch("libanogs.so", 0x204100, "hE0 03 1F 2A")
