@@ -1880,7 +1880,7 @@ nop.ButtonDrawable.setColorFilter(PorterDuffColorFilter(0xFF00FFEE, PorterDuff.M
 function nop.OnCheckedChangeListener()--NO PARACHUTE OpenParachute(bool isAuto)
   if nop.checked then
     antiC4droid()
-    HexPatches.MemoryPatch("libunity.so", 0x5DC662C, "00 00 80 D2 C0 03 5F D6");
+    HexPatches.MemoryPatch("libunity.so", 0x5A88C48, "00 00 80 D2 C0 03 5F D6");
     idkcstmToast (" ɴᴏ ᴘᴀʀᴀᴄʜᴜᴛᴇ ᴀᴄᴛɪᴠᴇ ")
   end
 end
