@@ -890,34 +890,34 @@ local function applyAimbotSeekbar(progress)
 
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x54F0E64,
+    0x5161770,
     "h40 00 00 1C"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x54F0E64 + 4,
+    0x5161770 + 4,
     "hC0 03 5F D6"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x54F0E64 + 8,
+    0x5161770 + 8,
     hexValue,
     4
   )
 
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x66BD5E8,
+    0x666FB88,
     "h40 00 00 1C"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x66BD5E8 + 4,
+    0x666FB88 + 4,
     "hC0 03 5F D6"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x66BD5E8 + 8,
+    0x666FB88 + 8,
     hexValue,
     4
   )
@@ -940,12 +940,12 @@ local function applySnowboardSeekbar(progress)
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x53FE8CC + 4,
+    0x53FE8D0,
     "hC0 03 5F D6 00 00 7A 44"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x53FE8CC + 8,
+    0x53FE8D4,
     hexValue,
     4
   )
@@ -957,12 +957,12 @@ local function applySnowboardSeekbar(progress)
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x53FE7FC + 4,
+    0x53FE800,
     "hC0 03 5F D6 00 00 7A 44"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x53FE7FC + 8,
+    0x53FE804,
     hexValue,
     4
   )
@@ -984,12 +984,12 @@ local function applyDivebSeekbar(progress)
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x5AB2784 + 4,
+    0x5AB2788,
     "C0 03 5F D6 00 00 7A 44"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x5AB27E8 + 8,
+    0x5AB27F0,
     hex,
     4
   )
@@ -1001,12 +1001,12 @@ local function applyDivebSeekbar(progress)
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x5AB2784 + 4,
+    0x5AB2788,
     "C0 03 5F D6 00 00 7A 44"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x5AB2784 + 8,
+    0x5AB278C,
     hex,
     4
   )
@@ -1049,12 +1049,12 @@ local function applyIpadSeekbar(progress)
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x668F2F8 + 4,
+    0x668F2FC,
     "hC0 03 5F D6"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x668F2F8 + 8,
+    0x668F300,
     hexValue,
     4
   )
@@ -1680,7 +1680,7 @@ wall.ButtonDrawable.setColorFilter(PorterDuffColorFilter(0xFF00FFEE, PorterDuff.
 function wall.OnCheckedChangeListener()
   if wall.checked then
     antiC4droid()
-    HexPatches.MemoryPatch("libunity.so", 0x55655CC, "h1F 20 03 D5 E0 03 13 AA", 32)
+    HexPatches.MemoryPatch("libunity.so", 0x548A67C, "h1F 20 03 D5 E0 03 13 AA", 32)
     idkcstmToast("Wallhack Activated")
   end
 end
@@ -1689,12 +1689,12 @@ wo.ButtonDrawable.setColorFilter(PorterDuffColorFilter(0xFF00FFEE, PorterDuff.Mo
 function wo.OnCheckedChangeListener()
   if wo.checked then
     HexPatches.MemoryPatch("libunity.so", 0xA0B6018, "h20 00 80 D2 C0 03 5F D6") -- get_IsInEM3Eye
-    HexPatches.MemoryPatch("libunity.so", 0xB1A47DC , "h40 00 00 1C C0 03 5F D6") -- GetAccDistance
-    HexPatches.MemoryPatch("libunity.so", 0xB1A47DC + 4, "hC0 03 5F D6 00 00 7A 44") -- GetAccDistance
-    HexPatches.MemoryPatch("libunity.so", 0xB1A47DC + 8, hexValue, 16) -- GetAccDistance
+    HexPatches.MemoryPatch("libunity.so", 0xB1A2814 , "h40 00 00 1C C0 03 5F D6") -- GetAccDistance
+    HexPatches.MemoryPatch("libunity.so", 0xB1A2818, "hC0 03 5F D6 00 00 7A 44") -- GetAccDistance
+    HexPatches.MemoryPatch("libunity.so", 0xB1A281C, hexValue, 16) -- GetAccDistance
     HexPatches.MemoryPatch("libunity.so", 0xA0B6020 , "h40 00 00 1C C0 03 5F D6") -- set_IsInEM3Eye
-    HexPatches.MemoryPatch("libunity.so", 0xA0B6020 + 4, "hC0 03 5F D6 00 00 7A 44") -- set_IsInEM3Eye
-    HexPatches.MemoryPatch("libunity.so", 0xA0B6020 + 8, hexValue, 16) -- set_IsInEM3Eye
+    HexPatches.MemoryPatch("libunity.so", 0xA0B6024, "hC0 03 5F D6 00 00 7A 44") -- set_IsInEM3Eye
+    HexPatches.MemoryPatch("libunity.so", 0xA0B6028, hexValue, 16) -- set_IsInEM3Eye
     idkcstmToast("ᴏᴜᴛʟɪɴᴇ : ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
    else
   end
@@ -1725,7 +1725,7 @@ br.ButtonDrawable.setColorFilter(PorterDuffColorFilter(0xFF00FFEE, PorterDuff.Mo
 function br.OnCheckedChangeListener()
   if br.checked then
     antiC4droid()
-    HexPatches.MemoryPatch("libunity.so", 0x6D2D72C, "h20 00 80 D2 C0 03 5F D6", 32) -- brtags1
+    HexPatches.MemoryPatch("libunity.so", 0x9899588, "h20 00 80 D2 C0 03 5F D6", 32) -- brtags1
     HexPatches.MemoryPatch("libunity.so", 0x6AE9A70, "h00 00 80 D2 C0 03 5F D6", 32); -- brtags2
   end
 end
@@ -1778,7 +1778,7 @@ function amo.OnCheckedChangeListener()
     HexPatches.MemoryPatch("libunity.so", 0x6AE86B0, "h00 00 80 52 C0 03 5F D6")
     HexPatches.MemoryPatch("libunity.so", 0x5474FA8, "h00 00 80 52 C0 03 5F D6")
     HexPatches.MemoryPatch("libunity.so", 0x5495438, "h00 00 80 52 C0 03 5F D6")
-    HexPatches.MemoryPatch("libunity.so", 0x548FDD8, "h20 00 80 D2 C0 03 5F D6")
+    HexPatches.MemoryPatch("libunity.so", 0x5107904, "h20 00 80 D2 C0 03 5F D6")
     HexPatches.MemoryPatch("libunity.so", 0xC2BA7A4, "h00 00 80 52 C0 03 5F D6")
     HexPatches.MemoryPatch("libunity.so", 0x5495EFC, "h20 00 80 D2 C0 03 5F D6")
 
@@ -1798,10 +1798,10 @@ function nocrouch.OnCheckedChangeListener()
     HexPatches.MemoryPatch("libunity.so", 0x53889CC, "00 00 80 D2 C0 03 5F D6", 32)
     HexPatches.MemoryPatch("libunity.so", 0x5388A4C, "00 00 80 D2 C0 03 5F D6", 32)
     HexPatches.MemoryPatch("libunity.so", 0x555DCD8, "00 00 80 D2 C0 03 5F D6", 32)
-    HexPatches.MemoryPatch("libunity.so", 0xC09CE48, "00 00 80 D2 C0 03 5F D6", 32)
-    HexPatches.MemoryPatch("libunity.so", 0x54A83A4, "00 00 80 D2 C0 03 5F D6", 32)
+    HexPatches.MemoryPatch("libunity.so", 0x559384C, "00 00 80 D2 C0 03 5F D6", 32)
+    HexPatches.MemoryPatch("libunity.so", 0x5424D7C, "00 00 80 D2 C0 03 5F D6", 32)
     HexPatches.MemoryPatch("libunity.so", 0x7C6DA60, "00 00 80 D2 C0 03 5F D6", 32)
-    HexPatches.MemoryPatch("libunity.so", 0x7C8D09C, "00 00 80 D2 C0 03 5F D6", 32)
+    HexPatches.MemoryPatch("libunity.so", 0x8C6B434, "00 00 80 D2 C0 03 5F D6", 32)
     idkcstmToast("NO CROUCH","0xFF00FF00","0xFF0000FF","15","18")
   end
 end
@@ -1811,7 +1811,7 @@ function blueprint.OnCheckedChangeListener()
   if blueprint.checked then
     antiC4droid()
     HexPatches.MemoryPatch("libunity.so", 0x97CC1D0, "20 00 80 D2 C0 03 5F D6"); -- IsUnlocked
-    HexPatches.MemoryPatch("libunity.so", 0x85C3D68, "20 00 80 D2 C0 03 5F D6"); -- IsUnlocked
+    HexPatches.MemoryPatch("libunity.so", 0x97CC1D0, "20 00 80 D2 C0 03 5F D6"); -- IsUnlocked
     idkcstmToast("UNLOCK BLUE PRINT")
   end
 end
@@ -1839,11 +1839,11 @@ function superfastdive.OnCheckedChangeListener()
 
     local fullDiveHex = "00 00 7A 44"
     HexPatches.MemoryPatch("libunity.so", 0x5AB27E8, "40 00 00 1C C0 03 5F D6")
-    HexPatches.MemoryPatch("libunity.so", 0x5AB27E8 + 4, "C0 03 5F D6 00 00 7A 44")
-    HexPatches.MemoryPatch("libunity.so", 0x5AB27E8 + 8, fullDiveHex, 4)
+    HexPatches.MemoryPatch("libunity.so", 0x5AB27EC, "C0 03 5F D6 00 00 7A 44")
+    HexPatches.MemoryPatch("libunity.so", 0x5AB27F0, fullDiveHex, 4)
     HexPatches.MemoryPatch("libunity.so", 0x5AB2784, "40 00 00 1C C0 03 5F D6")
-    HexPatches.MemoryPatch("libunity.so", 0x5AB2784 + 4, "C0 03 5F D6 00 00 7A 44")
-    HexPatches.MemoryPatch("libunity.so", 0x5AB2784 + 8, fullDiveHex, 4)
+    HexPatches.MemoryPatch("libunity.so", 0x5AB2788, "C0 03 5F D6 00 00 7A 44")
+    HexPatches.MemoryPatch("libunity.so", 0x5AB278C, fullDiveHex, 4)
     HexPatches.MemoryPatchBatch({
       {"libunity.so", 0x9BC6E24 + 8, fullDiveHex},
       {"libunity.so", 0x9BC6E24, "40 00 00 1C"}
@@ -1880,7 +1880,7 @@ nop.ButtonDrawable.setColorFilter(PorterDuffColorFilter(0xFF00FFEE, PorterDuff.M
 function nop.OnCheckedChangeListener()--NO PARACHUTE OpenParachute(bool isAuto)
   if nop.checked then
     antiC4droid()
-    HexPatches.MemoryPatch("libunity.so", 0x5A88C48, "00 00 80 D2 C0 03 5F D6");
+    HexPatches.MemoryPatch("libunity.so", 0x5DC662C, "00 00 80 D2 C0 03 5F D6");
     idkcstmToast (" ɴᴏ ᴘᴀʀᴀᴄʜᴜᴛᴇ ᴀᴄᴛɪᴠᴇ ")
   end
 end
@@ -1891,8 +1891,8 @@ function norlsg.OnCheckedChangeListener()
   if norlsg.checked then
     antiC4droid()
     -- Hex Patches for No Reload
-    HexPatches.MemoryPatch("libunity.so", 0xC2B5E84, "hE0 03 27 1E C0 03 5F D6")
-    HexPatches.MemoryPatch("libunity.so", 0xC2B5F90, "hE0 03 27 1E C0 03 5F D6")
+    HexPatches.MemoryPatch("libunity.so", 0x5475630, "hE0 03 27 1E C0 03 5F D6")
+    HexPatches.MemoryPatch("libunity.so", 0x54757B0, "hE0 03 27 1E C0 03 5F D6")
     HexPatches.MemoryPatch("libunity.so", 0xC2B62F4, "h20 00 80 D2 C0 03 5F D6")
     idkcstmToast("NO RELOAD SG","0xFF00FF00","0xFF0000FF","15","18")
   end
@@ -1963,54 +1963,31 @@ function autoBypass()
   isBypassExecuted = true -- I-lock na agad
 
   pcall(function()
-HexPatches.MemoryPatch("libanogs.so", 0x204218, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x20A39C, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x24D42C, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x29B58C, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x29FD40, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x29FD6C, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x3094FC, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x36B4C4, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x3778C8, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x37D344, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x404444, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x44A3F0, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x44BC90, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x44C104, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x455A80, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x468D48, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x4729C0, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x477FF8, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x47C43C, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x47F5E4, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x481640, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x48A6B4, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x494F48, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x497C98, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x497E64, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x4986B0, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x4987A8, "h00 00 80 D2 C0 03 5F D6")
-HexPatches.MemoryPatch("libanogs.so", 0x438154, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x44A714, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x48CF20, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x202680, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x35140C, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x37B5A8, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x3893D8, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x39AE94, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x497244, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x501210, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x431D70, "h00 00 80 D2 C0 03 5F D6", 32)
-HexPatches.MemoryPatch("libanogs.so", 0x4AFC1C, "h00 00 80 D2 C0 03 5F D6", 32)
-
+      HexPatches.MemoryPatch("libanogs.so", 0x202680, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x204218, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x35140C, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x37B5A8, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x3893D8, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x39AE94, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x44A714, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x44BC90, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x455A80, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x48CF20, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x497244, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x501210, "h00 00 80 D2 C0 03 5F D6", 32);
+      
+      HexPatches.MemoryPatch("libanogs.so", 0x438154, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x431D70, "h00 00 80 D2 C0 03 5F D6", 32);
+      HexPatches.MemoryPatch("libanogs.so", 0x48A6B4, "h00 00 80 D2 C0 03 5F D6", 32);
+      
 HexPatches.MemoryPatch("libanogs.so", 0x1f8408, "h00 00 80 D2 C0 03 5F D6")
 HexPatches.MemoryPatch("libanogs.so", 0x1f87b0, "h00 00 80 D2 C0 03 5F D6")
 HexPatches.MemoryPatch("libanogs.so", 0x204100, "hE0 03 1F 2A")
 HexPatches.MemoryPatch("libanogs.so", 0x41ba40, "h00 00 80 D2 C0 03 5F D6")
-    end)
+  end)
   
   -- Isang beses na lang lalabas ang Toast na ito
-  showToast("BYPASS ACTIVATED!!!")
+  showToast("BYPASS ACTIVATED")
 end
 
 -- I-load ang bypass nang hindi binibigla ang main thread sa pagsisimula
