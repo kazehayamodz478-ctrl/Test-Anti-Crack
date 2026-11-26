@@ -940,12 +940,12 @@ local function applySnowboardSeekbar(progress)
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x53FE8D0,
+    0x53FE8CC + 4,
     "hC0 03 5F D6 00 00 7A 44"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x53FE8D4,
+    0x53FE8CC + 8,
     hexValue,
     4
   )
@@ -957,12 +957,12 @@ local function applySnowboardSeekbar(progress)
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x53FE800,
+    0x53FE7FC + 4,
     "hC0 03 5F D6 00 00 7A 44"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x53FE804,
+    0x53FE7FC + 8,
     hexValue,
     4
   )
@@ -1049,12 +1049,12 @@ local function applyIpadSeekbar(progress)
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x668F2FC,
+    0x668F2F8 + 4,
     "hC0 03 5F D6"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x668F300,
+    0x668F2F8 + 8,
     hexValue,
     4
   )
