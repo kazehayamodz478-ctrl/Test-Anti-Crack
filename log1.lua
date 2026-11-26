@@ -890,34 +890,34 @@ local function applyAimbotSeekbar(progress)
 
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x5161770,
+    0x54F0E64,
     "h40 00 00 1C"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x5161770 + 4,
+    0x54F0E64 + 4,
     "hC0 03 5F D6"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x5161770 + 8,
+    0x54F0E64 + 8,
     hexValue,
     4
   )
 
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x666FB88,
+    0x66BD5E8,
     "h40 00 00 1C"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x666FB88 + 4,
+    0x66BD5E8 + 4,
     "hC0 03 5F D6"
   )
   HexPatches.MemoryPatch(
     "libunity.so",
-    0x666FB88 + 8,
+    0x66BD5E8 + 8,
     hexValue,
     4
   )
