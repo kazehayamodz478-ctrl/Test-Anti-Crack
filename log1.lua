@@ -1680,7 +1680,7 @@ wall.ButtonDrawable.setColorFilter(PorterDuffColorFilter(0xFF00FFEE, PorterDuff.
 function wall.OnCheckedChangeListener()
   if wall.checked then
     antiC4droid()
-    HexPatches.MemoryPatch("libunity.so", 0x548A67C, "h1F 20 03 D5 E0 03 13 AA", 32)
+    HexPatches.MemoryPatch("libunity.so", 0x55655CC, "h1F 20 03 D5 E0 03 13 AA", 32)
     idkcstmToast("Wallhack Activated")
   end
 end
@@ -1689,12 +1689,12 @@ wo.ButtonDrawable.setColorFilter(PorterDuffColorFilter(0xFF00FFEE, PorterDuff.Mo
 function wo.OnCheckedChangeListener()
   if wo.checked then
     HexPatches.MemoryPatch("libunity.so", 0xA0B6018, "h20 00 80 D2 C0 03 5F D6") -- get_IsInEM3Eye
-    HexPatches.MemoryPatch("libunity.so", 0xB1A2814 , "h40 00 00 1C C0 03 5F D6") -- GetAccDistance
-    HexPatches.MemoryPatch("libunity.so", 0xB1A2818, "hC0 03 5F D6 00 00 7A 44") -- GetAccDistance
-    HexPatches.MemoryPatch("libunity.so", 0xB1A281C, hexValue, 16) -- GetAccDistance
+    HexPatches.MemoryPatch("libunity.so", 0xB1A47DC , "h40 00 00 1C C0 03 5F D6") -- GetAccDistance
+    HexPatches.MemoryPatch("libunity.so", 0xB1A47DC + 4, "hC0 03 5F D6 00 00 7A 44") -- GetAccDistance
+    HexPatches.MemoryPatch("libunity.so", 0xB1A47DC + 8, hexValue, 16) -- GetAccDistance
     HexPatches.MemoryPatch("libunity.so", 0xA0B6020 , "h40 00 00 1C C0 03 5F D6") -- set_IsInEM3Eye
-    HexPatches.MemoryPatch("libunity.so", 0xA0B6024, "hC0 03 5F D6 00 00 7A 44") -- set_IsInEM3Eye
-    HexPatches.MemoryPatch("libunity.so", 0xA0B6028, hexValue, 16) -- set_IsInEM3Eye
+    HexPatches.MemoryPatch("libunity.so", 0xA0B6020 + 4, "hC0 03 5F D6 00 00 7A 44") -- set_IsInEM3Eye
+    HexPatches.MemoryPatch("libunity.so", 0xA0B6020 + 8, hexValue, 16) -- set_IsInEM3Eye
     idkcstmToast("ᴏᴜᴛʟɪɴᴇ : ᴀᴄᴛɪᴠᴀᴛᴇᴅ")
    else
   end
@@ -1720,12 +1720,11 @@ function norecoil.OnCheckedChangeListener()
   end
 end
 
-
 br.ButtonDrawable.setColorFilter(PorterDuffColorFilter(0xFF00FFEE, PorterDuff.Mode.SRC_ATOP))
 function br.OnCheckedChangeListener()
   if br.checked then
     antiC4droid()
-    HexPatches.MemoryPatch("libunity.so", 0x9899588, "h20 00 80 D2 C0 03 5F D6", 32) -- brtags1
+    HexPatches.MemoryPatch("libunity.so", 0x6D2D72C, "h20 00 80 D2 C0 03 5F D6", 32) -- brtags1
     HexPatches.MemoryPatch("libunity.so", 0x6AE9A70, "h00 00 80 D2 C0 03 5F D6", 32); -- brtags2
   end
 end
